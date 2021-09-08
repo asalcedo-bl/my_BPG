@@ -790,7 +790,7 @@ create.multipanelplot <- function(plot.objects = NULL, filename = NULL, height =
 		right = right.grob
 		);
 	## Add white background color
-	grob <- gtable_add_grob(grob, grobs = rectGrob(gp = gpar(fill = 'white', lwd = 0)), 1, 1, nrow(grob), ncol(grob), 0);
+	grob <- gtable_add_grob(grob, grobs = rectGrob(gp = gpar(fill = 'white', lwd = 0, col="white")), 1, 1, nrow(grob), ncol(grob), 0);
 	
 	grob.layout <- grid.layout(1,1);
 	grob.frame <- frameGrob(layout = grob.layout);

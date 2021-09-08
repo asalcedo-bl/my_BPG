@@ -13,7 +13,7 @@
 legend.grob <- function(
 	legends, label.cex = 1, title.cex = 1, title.just = 'centre', title.fontface = 'bold',
 	font.family = NULL, size = 3, border = NULL, border.padding = 1, layout = c(1, length(legends)),
-	between.col = 1, between.row = 1, use.legacy.settings = FALSE, x = 0.5, y = 0.5, background.col = 'white', background.alpha = 0
+	between.col = 1, between.row = 1, use.legacy.settings = FALSE, x = 0.5, y = 0.5, background.col = 'white', background.alpha = 0, title.padding=0.4
 	) {
 
 	# NOTE: calls to 'draw.key' may open a device for drawing (even with 'draw = FALSE' set)
@@ -129,7 +129,7 @@ legend.grob <- function(
 							col = 2 * (legend.col - 1) + 1,
 							height = max(
 								legend.grob.final$framevp$layout$heights[3 * (legend.row - 1) + 1],
-								unit(title.grob.height + 0.4, 'lines')
+								unit(title.grob.height + title.padding, 'lines')
 								),
 							force.height = TRUE,
 
